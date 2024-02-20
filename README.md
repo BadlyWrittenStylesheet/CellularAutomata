@@ -1,12 +1,13 @@
 # My awful approach at creating a simulation
 ## Made with HTML5 canvas and JS
 
-## Available at [
+## Available [right here](https://badlywrittenstylesheet.github.io/CellularAutomata/)
 
 ### Some future plans:
-- Importing files with canvas.width canvas.height and 0s / 1s for the canvas true/false cells
-- Nicer editor
+- Nicer editor ( making lines, holding the mouse button and such )
 - Saving in local storage
+- Loading from local storage
+- Loading from file
 - Making your own conditions for cells
 - Fun little stuff, like changing the colors
 
