@@ -1,0 +1,12 @@
+body {
+    margin: 0;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, deeppink, deepskyblue);
+}
+
+
+canvas:hover {
+    /* background: lime; */
+}
