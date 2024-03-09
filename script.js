@@ -105,19 +105,17 @@ function updateGrid() {
             const neighbors = countNeighbors(i, j);
 
             if (grid[i][j]) {
-                if (neighbors <= 2 || neighbors > 5) {
+                if (neighbors < 2 || neighbors > 3) {
                     newGrid[i][j] = false;
-                } else {
+                } 
+                else {
                     newGrid[i][j] = true;
                 }
             } else {
-                if (neighbors > 2 && neighbors < 5) {
+                if (neighbors === 3) {
                     newGrid[i][j] = true;
                 } else {
                     newGrid[i][j] = false;
-                }
-                if (neighbors === 6) {
-                    newGrid[i][j] = true
                 }
             }
         }
