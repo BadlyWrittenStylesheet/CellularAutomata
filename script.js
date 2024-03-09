@@ -60,13 +60,33 @@ resetButton.addEventListener('click', function() {
 });
 
 
-canvas.addEventListener('click', function(e) {
+
+function updateCell(x, y) {
+    grid[y][x] = !grid[y][x];
+    drawGrid();
+}
+
+
+updatingCells = false
+canvas.addEventListener('mousedown', (e) => {
+    updatingCells = true
     const x = Math.floor(e.offsetX / cellSize);
     const y = Math.floor(e.offsetY / cellSize);
+    
+    updateCell(x, y)
+});
+canvas.addEventListener('mouseup', (e) => {
+    updatingCells = false
+});
 
-    grid[y][x] = !grid[y][x];
+canvas.addEventListener('mousemove', (e) => {
+    if (updatingCells) {
 
-    drawGrid();
+        const x = Math.floor(e.offsetX / cellSize);
+        const y = Math.floor(e.offsetY / cellSize);
+        
+        updateCell(x, y)
+    }
 });
 
 function drawGrid() {
